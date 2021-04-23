@@ -18,6 +18,9 @@ public class HomePage {
 
     @FindBy(id = "SubmitLogin")
     private WebElement signInButton;
+    
+    @FindBy(className = "logout")
+    private WebElement signOutLink;
 
     private WebDriver driver;
 
@@ -33,6 +36,10 @@ public class HomePage {
 
     public void clickSignInButton() {
         signInButton.click();
+    }
+    
+    public void clickSignOutLink() {
+        signOutLink.click();
     }
 
     public Optional<String> getErrorMessage() {

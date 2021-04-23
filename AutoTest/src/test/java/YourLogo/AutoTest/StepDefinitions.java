@@ -1,8 +1,10 @@
 package YourLogo.AutoTest;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +22,7 @@ public class StepDefinitions {
 
     static WebDriver driver;
 
-    private HomePage homePage;
+    public HomePage homePage;
 
     static {
         WebDriverManager.chromedriver().setup();
@@ -66,5 +68,16 @@ public class StepDefinitions {
     	String currentUrl = homePage.getURL(driver);  
     	Assert.assertEquals(url, currentUrl);
     }
+    
+    @When("The Sign out link is clicked")
+    public void theSignOutLinkIsClicked() {
+        homePage.clickSignOutLink();
+    }
+    
+    
+	@After("@LogOut")
+	    public void afterLogOut(){
+		theSignOutLinkIsClicked();	        
+	    }
 
 }
