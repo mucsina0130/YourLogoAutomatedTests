@@ -98,23 +98,25 @@ public class StepDefinitions {
 			homePage.clickMyPersonalInformationButton();
 		}
 	}
-	
-    @When("The Home button is clicked")
-    public void theHomeButtonIsClicked() {
-    	homePage.clickHomeButton();
-    }
-    @When("The first last button is clicked")
-    public void theFirstLastButtonIsClicked() {
-    	homePage.clickFirstLastButton();
-    }
-    @When("The Home icon is clicked")
-    public void theHomeIconIsClicked() {
-    	homePage.clickHomeIcon();
-    }
-    
-    @When("The Back To Your Account button is clicked")
-    public void theBackToYourAccountButtonIsClicked() {
-    	homePage.clickBackToYourAccountButton();
-    }
-	
+
+	@When("The Home button is clicked")
+	public void theHomeButtonIsClicked() {
+		homePage.clickHomeButton();
+	}
+
+	@When("The first last button is clicked")
+	public void theFirstLastButtonIsClicked() {
+		homePage.clickFirstLastButton();
+	}
+
+	@When("The Home icon is clicked")
+	public void theHomeIconIsClicked() {
+		homePage.clickHomeIcon();
+	}
+
+	@When("The Back To Your Account button is clicked")
+	public void theBackToYourAccountButtonIsClicked() {
+		homePage.clickBackToYourAccountButton();
+	}
+
 }
